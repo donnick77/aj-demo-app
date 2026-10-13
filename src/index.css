@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0b0f17;
+  --bg-card: #121926;
+  --bg-card-hover: #182133;
+  --fg: #e6edf6;
+  --muted: #8b98ab;
+  --accent: #4f8cff;
+  --accent-hover: #6ba0ff;
+  --border: #223049;
+  --ok: #34c77b;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 70% -10%, rgba(79, 140, 255, 0.16), transparent),
+    radial-gradient(900px 400px at 10% 110%, rgba(52, 199, 123, 0.08), transparent),
+    var(--bg);
+  color: var(--fg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.55rem 1.1rem;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+button:active {
+  transform: scale(0.97);
+}
